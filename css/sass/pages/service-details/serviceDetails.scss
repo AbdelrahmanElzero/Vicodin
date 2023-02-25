@@ -1,0 +1,161 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+@import "../../helpers/variables";
+@import "../../helpers/classes";
+@import "../../helpers/mixins";
+@import "../../helpers/buttons";
+
+
+.details{
+  .container{
+    padding-left: 10px;
+    padding-right: 10px;
+    .left-side{
+      .image{
+        img{
+          max-width: 100%;
+          object-fit: cover;
+        }
+      }
+      p{
+        line-height: 1.6;
+        span{
+          width: 80px;
+          height: 80px;
+          float: left;
+          text-align: center;
+          margin-right: 20px;
+          background-color: $green-color;
+          color: white;
+          font: {
+            size: 50px;
+            weight: bold;
+          }
+        }
+      }
+      .image-left{
+        img{
+          max-width: 100%;
+
+        }
+      }
+    }
+    .right-side{
+      .other-services{
+        .item{
+          background-color: $bg-section;
+          padding: 10px 20px;
+          cursor: pointer;
+          user-select: none;
+          transition: .4s;
+          color: $p-color;
+          font-size: 15px;
+          font-weight: bold;
+          svg{
+            padding: 15px 20px;
+            background-color: white;
+            color: $heading-color;
+            transition: .4s;
+            &:hover{
+              background-color: $heading-color;
+              color: white;
+            }
+          }
+          &:hover, &.active{
+            background-color: $green-color;
+            color: white;
+            svg{
+              background-color: $red-color;
+              color: white;
+            }
+          }
+          svg:hover{
+            background-color: $heading-color;
+            color: white;
+          }
+        }
+      }
+      .subscribe{
+        background-color: $heading-color;
+        padding: 50px;
+        position: relative;
+        z-index: 3;
+        & > svg{
+          color: white;
+          z-index: -1;
+          width: 110px;
+          height: 110px;
+          position: absolute;
+          top: 40px;
+          right: 60px;
+          opacity: .1;
+        }
+        p{
+          color: $green-color;
+          font-weight: bold;
+        }
+        h3{
+          color: white;
+          font-size: 33px;
+          font-weight: bold;
+        }
+        form{
+          position: relative;
+          margin-bottom: 20px;
+          margin-top: 15px;
+          input{
+            width: 80%;
+            height: 60px;
+            padding: 20px 25px;
+            outline: none;
+            background-color: #133236;
+            border: 1px solid #133236;
+            color: white;
+            &::placeholder{
+              color: white;
+              font-weight: bold;
+              font-size: 14px;
+            }
+          }
+          button{
+            position: absolute;
+            top: 10px;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 0;
+            background-color: $green-color;
+            transition: .4s;
+            svg{
+              color: white;
+              font-size: 20px;
+              transition: .4s;
+            }
+            &:hover{
+              background-color: $red-color;
+                            
+            }
+          }
+        }
+      }
+      a{
+        padding:0;
+        margin-top: 20px;
+        border-radius: 0;
+        overflow: hidden;
+        img{
+          width: 100%;
+          transition: .4s;
+        }
+        &:hover{
+          img{
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+  
+
+}

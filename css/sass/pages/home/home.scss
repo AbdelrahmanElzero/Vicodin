@@ -1,0 +1,1299 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+@import "../../helpers/variables";
+@import "../../helpers/classes";
+@import "../../helpers/mixins";
+@import "../../helpers/buttons";
+
+
+.landing-section{
+  .landing-slider{
+    height: 800px;
+    position: relative;
+    .slide-item{
+      padding-top: 200px;
+      padding-bottom: 200px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: block;
+      &.left{
+        background-image: url("https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/slider/13.jpg");
+        .slide-content{
+          max-width: 500px;
+          margin-top: 60px;
+          h6{
+            font-weight: bold;
+            svg{
+              color: $green-color;
+            }
+          }
+          p{
+            padding-left: 20px;
+            border-left: 1px solid $p-color;
+          }
+          a#shopNow{
+            background-color: $green-color;
+            color: white;
+            border-radius: 0;
+            width: 150px;
+            height: 50px;
+            @include flex(row, center, center);
+            position: relative;
+            overflow: hidden;
+            transition: .4s;
+            z-index: 3;
+            &::before{
+              content: "";
+              position: absolute;
+              top: 0;
+              left: -100%;
+              background-color: white;
+              width: 100%;
+              height: 100%;
+              transition: .4s;
+              z-index: -1;
+            }
+            &:hover{
+              border: 1px solid $heading-color;
+              background-color: $heading-color;
+              color: black;
+              &::before{
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+      &.center{
+        background-image: url('https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/slider/11.jpg');
+        .slide-content{
+          max-width: 500px;
+          margin-top: 60px;
+          h6{
+            font-weight: bold;
+            svg{
+              color: $green-color;
+            }
+          }
+          a#shopNow{
+            background-color: $green-color;
+            color: white;
+            border-radius: 0;
+            width: 150px;
+            height: 50px;
+            @include flex(row, center, center);
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            transition: .4s;
+            z-index: 3;
+            &::before{
+              content: "";
+              position: absolute;
+              top: 0;
+              left: -100%;
+              background-color: white;
+              width: 100%;
+              height: 100%;
+              transition: .4s;
+              z-index: -1;
+            }
+            &:hover{
+              border: 1px solid $heading-color;
+              background-color: $heading-color;
+              color: black;
+              &::before{
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+      &.right{
+        background-image: url('https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/slider/12.jpg');
+        .slide-content{
+          max-width: 500px;
+          margin-top: 60px;
+          text-align: right;
+          h6{
+            font-weight: bold;
+            svg{
+              color: $green-color;
+            }
+          }
+          p{
+            padding-right: 20px;
+            border-right: 1px solid $p-color;
+          }
+          a#shopNow{
+            background-color: $green-color;
+            color: white;
+            border-radius: 0;
+            width: 150px;
+            height: 50px;
+            @include flex(row, center, center);
+            float: right;
+            position: relative;
+            overflow: hidden;
+            transition: .4s;
+            z-index: 3;
+            &::before{
+              content: "";
+              position: absolute;
+              top: 0;
+              left: -100%;
+              background-color: white;
+              width: 100%;
+              height: 100%;
+              transition: .4s;
+              z-index: -1;
+            }
+            &:hover{
+              border: 1px solid $heading-color;
+              background-color: $heading-color;
+              color: black;
+              &::before{
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .owl-nav{
+      z-index: 99;
+      opacity: 0;
+      transition: .3s;
+      button{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid white;
+        width: 60px;
+        height: 60px;
+        border-radius: 0;
+        transition: .4s;
+        
+        span{
+          font-size: 35px;
+          color: black;
+          transition: .6s;
+        }
+        &:hover{
+          background-color: $green-color;
+          border: 0;
+          span{
+            color: white;
+          }
+        }
+        &.owl-prev{
+          left: 0;
+        }
+        &.owl-next{
+          right: 0;
+        }
+      }
+    }
+    .owl-dots{
+      position: relative;
+      bottom: 140px;
+      left: 50%;
+      transform: translateX(-50%);
+      .owl-dot{
+        span{
+          width: 15px;
+          height: 15px;
+          transition: .6s;
+        }
+        &.active, &:hover{
+          span{
+            background-color: $green-color;
+          }
+        }
+      }
+    }
+    &:hover{
+      .owl-nav{
+        opacity: 1;
+      }
+    }
+  }
+  
+}
+
+.header{
+  z-index: 999;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding: 22px;
+  background-color: white;
+  &.full{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    box-shadow: 0 10px 50px 0 rgb(46 56 220 / 20%);
+  }
+  .container{
+    @include flex(row, space-between, center);
+    .left-side{
+      @include flex(row, center, center);
+      gap: 60px;
+      ul.links{
+        @include flex(row, center, center);
+        .link-item{
+          &#about{
+            position: relative;
+            @include flex(row, center, center);
+            .plus-icons{
+              position: relative;
+              padding: 17px 9px 0 0;
+              span{
+                width: 2px;
+                height: 8px;
+                display: block;
+                background-color: $heading-color;
+                &.plus-x{
+                  transform: rotate(90deg);
+                  position: absolute;
+                  top: 17px;
+                }
+              }
+            }
+            .sub-links{
+              position: absolute;
+              background-color: white;
+              padding: 20px;
+              min-width: 230px;
+              top: 60px;
+              left: 0;
+              border-top: 4px solid $green-color;
+              transition: .6s;
+              transform: scale(0);
+              z-index: 999;
+              .sub-link{
+                a{
+                  text-align: left;
+                  color: $p-color;
+                  padding: 10px;
+                  display: block;
+                  transition: .6s;
+                  font-size: 15px;
+                }
+                &:hover{
+                  a{
+                    color: $green-color;
+                  }
+                }
+              }
+            }
+            &:hover{
+              .sub-links{
+                transform: scale(1);
+              }
+            }
+          }
+          .link{
+            padding: 20px 10px 0;
+            display: inline-block;
+            color: $heading-color;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header{
+  .buttons{
+    @include flex(row, center, center);
+    gap: 10px;
+    button{
+      width: 50px;
+      height: 50px;
+      transition: .6s;
+      text-align: center;
+      border-radius: 0;
+      svg{
+        transition: .6s;
+        color: $heading-color;
+      }
+      &:hover{
+        background-color: $green-color;
+        svg{
+          color: white;
+        }
+      }
+    }
+    .user{
+      position: relative;
+      .sub-menu{
+        position: absolute;
+        top: 160px;
+        right: 0;
+        background-color: white;
+        z-index: 999;
+        min-width: 170px;
+        padding: 10px;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .2s ease .1s,visibility .2s  .1s,top .2s ease .1s;
+        .sub-link{
+          text-align: left;
+          a{
+            color: $p-color;
+            transition: .6s;
+            &:hover{
+              color: $green-color;
+            }
+          }
+        }
+      }
+      &:hover{
+        .sub-menu{
+          visibility: visible;
+          opacity: 1;
+          top: 60px;
+        }
+      }
+    }
+    .shoping{
+      position: relative;
+      span{
+        position: absolute;
+        top: 5px;
+        right: 6px;
+        color: $green-color;
+        transition: .5s;
+        font-size: 14px;
+      }
+    }
+    .nav-toggler{
+      display: none;
+      .toggle{
+        width: 20px;
+        height: 2px;
+        background-color: $heading-color;
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        transition: .6s;
+        &.top{
+          margin-bottom: 5px;
+          transform: rotate(180deg);
+        }
+        &.bottom{
+          margin-top: 5px;
+        }
+      }
+      &:hover{
+        .toggle{
+          background-color: white;
+        }
+      }
+      &.active{
+        .toggle.top{
+          margin-bottom: 0;
+          transform: rotate(45deg);
+        }
+        .toggle.middle{
+          opacity: 0;
+        }
+        .toggle.bottom{
+          margin-top: -4px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+.search-overlay{
+  position: fixed;
+  top: -300%;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  z-index: 1992;
+  &#overlayOne{
+    opacity: .2;
+    transition: .2s;
+  }
+  &#overlayTwo{
+    opacity: .9;
+    transition: .8s;
+  }
+  &.active{
+    top: 0;
+  }
+}
+
+
+.form-canvas{
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  transition: .7s;
+  @include flex(row, center, center);
+  &.active{
+    top: 0;
+  }
+  button#closeSearch{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    svg{
+      color: white;
+      font-size: 20px;
+      transition: color .2s;
+    }
+    &:hover{
+      svg{
+        color: red;
+      }
+    }
+  }
+  form{
+    position: relative;
+    width: 450px;
+    transition: 1s;
+    @media (max-width: 500px){
+      width: 300px;
+    }
+    input{
+      width: 100%;
+      height: 50px;
+      padding: 10px 20px;
+      border: none;
+      outline: none;
+      border-radius: 27px;
+    }
+    svg{
+      position: absolute;
+      top: 3px;
+      right: 6px;
+      background-color: $heading-color;
+      color: white;
+      padding: 13px;
+      border-radius: 50%;
+    }
+  }
+}
+
+
+.med-features{
+  position: relative;
+  .feature-slider{
+    padding-top: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid $main-border-color;
+    .feature-slide-item{
+      cursor: pointer;
+      @include flex(column, center, center);
+      gap: 17px;
+      .icon{
+        svg{
+          font-size: 26px;
+          color: $p-color;
+          transition: .6s;
+        }
+      }
+      h6{
+        color: black;
+        font-weight: bold;
+        transition: .6s;
+      }
+      &:hover{
+        .icon{
+          svg{
+            color: $green-color;
+          }
+        }
+        h6{
+          color: $green-color;
+        }
+      }
+    }
+  }
+}
+
+
+
+.hot-sales{
+  .container{
+    .img{
+      overflow: hidden;
+      img{
+        max-width: 100%;
+        object-fit: cover;
+        transition: .9s;
+      }
+      &:hover{
+        img{
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+
+.featured-products{
+  .container{
+    .row{
+      .image{
+        overflow: hidden;
+        img{
+          max-width: 100%;
+          object-fit: cover;
+          transition: .9s;
+        }
+        &:hover{
+          img{
+            transform: scale(1.1);
+          }
+        }
+      }
+      .product-card{
+        position: relative;
+        overflow: hidden;
+        .product-image{
+          img{
+            max-width: 100%;
+            object-fit: cover;
+            transition: 1.7s;
+          }
+        }
+        .text{
+          padding-top: 20px;
+          a{
+            font-weight: bold;
+            transition: .6s;
+            padding-left: 0;
+            display: block;
+            text-align: left;
+            &:hover{
+              color: $green-color;
+            }
+          }
+          span{
+            font-size: 14px;
+            font-weight: bold;
+            color: $heading-color;
+          }
+          del{
+            color: red;
+            font-size: 11px;
+            padding-left: 10px;
+            font-weight: bold;
+          }
+        }
+        .buttons{
+          position: absolute;
+          bottom: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          @include flex(row, center, center);
+          transition: .6s;
+          button{
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 0;
+            &:not(:last-of-type){
+              border-right: 2px solid $main-border-color;
+            }
+            svg{
+              font-size: 18px;
+              color: $p-color;
+              transition: .6s;
+            }
+            &:hover{
+              svg{
+                color: $green-color;
+              }
+            }
+          }
+        }
+        &:hover{
+          .product-image{
+            img{
+              transform: scale(1.1);
+            }
+          }
+          .buttons{
+            bottom: 50%;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.detailsCanvas{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: -300%;
+  left: 0;
+  z-index: 1997;
+  overflow-y: auto;
+  transition: .9s;
+  &.active{
+    top: 0;
+  }
+  @include scrollbar(8px, $green-color);
+}
+
+.detailsOverlay{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .4;
+  z-index: 1996;
+  position: fixed;
+  left: 0;
+  top: -200%;
+  transition: .5s;
+  &.active{
+    top: 0;
+  }
+}
+
+
+.productView-canvas{
+  width: 85%;
+  background-color: #fff;
+  z-index: 19999;
+  position: relative;
+  margin: 160px auto;
+  .container{
+    padding: 30px;
+    button.close{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: $main-border-color;
+      border-radius: 0;
+      padding: 10px 15px;
+      z-index: 1999;
+    }
+    .image{
+      img{
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .review-icons{
+      color: $star-rate;
+      svg{
+        font-size: 14px;
+      }
+      span{
+        font-size: 12px;
+      }
+    }
+    .product-name{
+      font-size: 30px;
+      padding-left: 0;
+      font-weight: 600;
+      transition: .6s;
+      &:hover{
+        color: $green-color;
+      }
+    }
+    .price{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      h1{
+        font-weight: 800;
+        color: $green-color;
+        margin-bottom: 0;
+      }
+      del{
+        color: red;
+        font-size: 25px;
+        font-weight: 800;
+      }
+    }
+    .buttons{
+      button{
+        font-size: 15px;
+        font-weight: 600;
+        color: $p-color;
+        padding-left: 0;
+        transition: .6s;
+        svg{
+          padding-right: 6px;
+        }
+        &:hover{
+          color: $green-color;
+        }
+      }
+    }
+    .share{
+      span{
+        font-weight: bold;
+        color: $p-color;
+        padding-right: 10px;
+      }
+      .links{
+        a{
+          padding-bottom: 0;
+          color: $p-color;
+          transition: .6s;
+          &:hover{
+            color: $green-color;
+          }
+        }
+      }
+    }
+    a.view-details{
+      float: right;
+      color: $p-color;
+      text-decoration: underline;
+      font-size: 15px;
+      display: block;
+      padding-top: 20px;
+      transition: .6s;
+      &:hover{
+        color: $green-color;
+      }
+    }
+  }
+}
+
+.buyOverlay, .loveOverlay{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .5;
+  position: fixed;
+  top: -200%;
+  left: 0;
+  z-index: 1998;
+  transition: .4s;
+  &.active{
+    top: 0;
+  }
+}
+
+.buyCanvas{
+  position: fixed;
+  top: -200%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 1999;
+  width: 500px;
+  transition: .8s;
+  @media (max-width: 991px){
+    width: 300px;
+  }
+  &.active{
+    top: 50%;
+  }
+  button.closeBuyCanvas{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 0;
+    padding: 7px 12px;
+    z-index: 1999;
+  }
+  .canvas-box{
+    .image{
+      img{
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+    .main-title{
+      padding-left: 0;
+      font-size: 18px;
+      transition: .6s;
+      &:hover{
+        color: $green-color;
+      }
+    }
+    .text{
+      padding-top: 10px;
+      color: $p-color;
+      svg{
+        color: $green-color;
+      }
+    }
+    .links{
+      padding-top: 15px;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      a{
+        &:first-of-type{
+          @include button(35px, 110px, $green-color, white, $heading-color, white, right);
+        }
+        &:last-of-type{
+          @include button(35px, 110px, $heading-color, white, $heading-color, white, left);
+        }
+      }
+    }
+  }
+}
+
+.loveCanvas{
+  position: fixed;
+  top: -200%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 1999;
+  width: 500px;
+  transition: .8s;
+  @media (max-width: 991px){
+    width: 300px;
+  }
+  &.active{
+    top: 50%;
+  }
+  button.closeBuyCanvas{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 0;
+    padding: 7px 12px;
+    z-index: 1999;
+  }
+  .image{
+    img{
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+  .main-title{
+    padding-left: 0;
+    font-size: 18px;
+    transition: .6s;
+    &:hover{
+      color: $green-color;
+    }
+  }
+  .text{
+    padding-top: 10px;
+    color: $p-color;
+    svg{
+      color: $green-color;
+    }
+  }
+  a.wishlist-view{
+    margin-top: 20px;
+    @include button(35px, 150px, $green-color, white, $heading-color, white, right);
+  }
+}
+
+
+.latest-products{
+  .card{
+    position: relative;
+    border: 1px solid $main-border-color;
+    transition: .4s;
+    border-radius: 0;
+    &.new{
+      &::before{
+        content: "NEW";
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 30px;
+        font-weight: bold;
+        color: white;
+        @include flex(row, center, center);
+        background-color: $green-color;
+      }
+    }
+    .card-body{
+      margin-top: 10px;
+      .review-icons{
+        svg{
+          color: $star-rate;
+        }
+      }
+      a{
+        padding: 10px 0;
+        color: $heading-color;
+        transition: .6s;
+        font-weight: 800;
+        &:hover{
+          color: $green-color;
+        }
+      }
+      .price{
+        h1{
+          font-size: 20px;
+          margin-bottom: 0;
+          color: $green-color;
+          font-weight: bold;
+        }
+        del{
+          color: red;
+          font-weight: bold;
+        }
+      }
+    }
+    .buttons{
+      position: absolute;
+      bottom: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      @include flex(row, center, center);
+      transition: .6s;
+      button{
+        background-color: white;
+        padding: 10px 15px;
+        border-radius: 0;
+        &:not(:last-of-type){
+          border-right: 2px solid $main-border-color;
+        }
+        svg{
+          font-size: 18px;
+          color: $p-color;
+          transition: .6s;
+        }
+        &:hover{
+          svg{
+            color: $green-color;
+          }
+        }
+      }
+    }
+    &:hover{
+      box-shadow: $shadow;
+      .buttons{
+        opacity: 1;
+        bottom: 50%;
+      }
+    }
+  }
+}
+
+.covering-mask{
+  background-color: $bg-section;
+  position: relative;
+  &::after{
+    background-image: url('https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/others/1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 45%;
+    @media (max-width: 991px){
+      display: none;
+    }
+  }
+  .right-side{
+    h6{
+      font-weight: bold;
+      color: $green-color;
+    }
+    h1{
+      font-weight: 800;
+    }
+    .items{
+      .item{
+        position: relative;
+        svg{
+          background-color: $green-color;
+          color: white;
+          padding: 13px;
+          border-radius: 50%;
+        }
+      }
+    }
+    a.view-services{
+      padding: 40px 0;
+      color: $green-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+.trending-products{
+  .card{
+    position: relative;
+    transition: .5s;
+    border: 1px solid $main-border-color;
+    border-radius: 0;
+    &.new{
+      &::after{
+        content: "NEW";
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 50px;
+        height: 30px;
+        font: {
+          size: 12px;
+          weight: bold;
+        }
+        @include flex(row, center, center);
+        background-color: $green-color;
+        color: white;
+      }
+    }
+    .card-body{
+      .price{
+        h1{
+          font-weight: bold;
+          font-size: 18px;
+          margin-bottom: 0;
+          color: $green-color;
+        }
+        del{
+          font-weight: bold;
+          color: red;
+          opacity: .6;
+        }
+      }
+    }
+    .buttons{
+      position: absolute;
+      bottom: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      @include flex(row, center, center);
+      transition: .6s;
+      button{
+        background-color: white;
+        padding: 10px 15px;
+        border-radius: 0;
+        &:not(:last-of-type){
+          border-right: 2px solid $main-border-color;
+        }
+        svg{
+          font-size: 18px;
+          color: $p-color;
+          transition: .6s;
+        }
+        &:hover{
+          svg{
+            color: $green-color;
+          }
+        }
+      }
+    }
+    &:hover{
+      box-shadow: $shadow;
+      .buttons{
+        opacity: 1;
+        bottom: 50%;
+      }
+    }
+  }
+  .image{
+    overflow: hidden;
+    display: block;
+    padding: 0;
+    border-radius: 0;
+    img{
+      max-width: 100%;
+      object-fit: cover;
+      transition: .9s;
+    }
+    &:hover{
+      img{
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.feats{
+  background-color: $bg-section;
+  .feat{
+    display: flex;
+    align-items: center;
+    @media (max-width: 767px){
+      justify-content: center;
+    }
+    gap: 20px;
+    svg{
+      font-size: 45px;
+      color: $p-color;
+    }
+    .text{
+      h3{
+        font: {
+          size: 18px;
+          weight: bold;
+        }
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+
+.footer{
+  background-color: $bg-section;
+  .one{
+    color: $p-color;
+    .phone{
+      svg{
+        transform: rotate(-45deg);
+      }
+      a{
+        color: $p-color;
+        transition: .6s;
+        &:hover{
+          color: $green-color;
+        }
+      }
+    }
+    .email{
+      a{
+        color: $p-color;
+        font-size: 13px;
+        transition: .6s;
+        &:hover{
+          color: $green-color;
+        }
+      }
+    }
+    .social-links{
+      a{
+        padding-left: 0;
+        color: $p-color;
+        transition: .6s;
+        padding-right: 15px;
+        &:hover{
+          color: $green-color;
+        }
+      }
+    }
+  }
+  .part{
+    h4{
+      font-size: 20px;
+    }
+    a{
+      color: $p-color;
+      position: relative;
+      transition: .5s;
+      overflow: hidden;
+      padding: 10px 0;
+      &::after{
+        content: "//";
+        position: absolute;
+        left: -100%;
+        top: 8px;
+        color: $green-color;
+        transition: .4s;
+      }
+      &:hover{
+        color: $green-color;
+        padding-left: 20px;
+        &::after{
+          left: 5px;
+        }
+      }
+    }
+  }
+  .five{
+    form{
+      width: 200px;
+      position: relative;
+      input{
+        width: 100%;
+        border: 0;
+        outline: 0;
+        height: 60px;
+        padding: 20px 30px;
+      }
+      button{
+        position: absolute;
+        background-color: $green-color;
+        border-radius: 0;
+        top: 20px;
+        width: 55px;
+        height: 60px;
+        svg{
+          color: white;
+        }
+      }
+    }
+    .pay{
+      img{
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px){
+  .header{
+    .container{
+      .left-side{
+        ul.links{
+          display: none;
+        }
+        .buttons{
+          .nav-toggler{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px){
+  .header{
+    .container{
+      flex-direction: column;
+      .left-side{
+        margin-top: 20px;
+        ul.links{
+          display: none;
+        }
+        .buttons{
+          .user{
+            .sub-menu{
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,43 @@
+@mixin button($height, $width, $bg, $f-color, $h-color, $hover-bg, $hover-direction ){
+  position: relative;
+  height: $height;
+  width: $width;
+  background-color: $bg;
+  color: $f-color;
+  overflow: hidden;
+  display: block;
+  z-index: 2;
+  transition: .4s;
+  border-radius: 0;
+  &::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+    position: absolute;
+    top: 0;
+    background-color: $hover-bg;
+    z-index: -1;
+    @if $hover-direction == left{
+      right: -100%;
+    } @else {
+      left: -100%;
+    }
+  }
+  &:hover{
+    color: $h-color;
+    border: 1px solid $bg;
+    @if $bg == $heading-color{
+      background-color: $green-color;
+    } @else{
+      background-color: $heading-color;
+    }
+      &::after{
+        @if $hover-direction == left{
+          right: 0;
+        } @else {
+          left: 0;
+        }
+      } 
+    }
+  }

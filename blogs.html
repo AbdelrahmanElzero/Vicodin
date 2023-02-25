@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/sass/pages/global/global.css">
+  <link rel="stylesheet" href="css/sass/pages/news/news.css">
+  <title>News</title>
+</head>
+<body>
+  <div class="secondheader">
+    <div class="container-fluid">
+      <div class="main-header">
+        <div class="container-fluid d-flex align-items-center">
+          <a href="index.html" class="btn logo">
+            <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/logo.png" alt="">
+          </a>
+          <div class="phone d-flex align-items-center gap-1">
+            <button type="button" class="btn">
+              <i class="fa-solid fa-phone-volume"></i>
+            </button>
+            <div class="text">
+              <h6 class="text-uppercase">phone</h6>
+              <a href="tel:+201112391020" class="btn">+201112391020</a>
+            </div>
+          </div>
+          <form action="">
+            <input class="search-input" type="text" placeholder="Search Here...">
+            <button class="btn" type="button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+          <div class="buttons d-flex">
+            <button class="btn search" type="button" id="searchButton">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </butt>
+            <button class="btn user" type="button">
+              <i class="fa-regular fa-user"></i>
+              <ul class="sub-menu shadow">
+                <li class="sub-link">
+                  <a class="btn" href="#">Sign In</a>
+                </li>
+                <li class="sub-link">
+                  <a class="btn" href="#">Sign Up</a>
+                </li>
+                <li class="sub-link">
+                  <a class="btn" href="#">My Account</a>
+                </li>
+                <li class="sub-link">
+                  <a class="btn" href="#">Wishlist</a>
+                </li>
+              </ul>
+            </button>
+            <div class="btn shoping d-flex align-items-center" id="shopMenu">
+              <button class="btn " type="button">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+              <div class="text">
+                <p class="text-uppercase">your cart</p>
+                <span>$89.25</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="canvas-overlay right" id="overlay-right"></div>
+      <div class="right-canvas" id="canvasRight">
+        <div class="canvas-cont">
+          <div class="head">
+            <h6>Caret</h6>
+            <button class="btn close-canvas" type="button" id="closeRightCanvas">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="body">
+            <div class="body-products">
+              <div class="product">
+                <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/1.png" alt="">
+                <div class="text">
+                  <a class="btn" href="#">
+                    Antiseptic Spray
+                  </a>
+                  <span>1 x $65.00</span>
+                </div>
+                <button class="btn shadow">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+              <div class="product">
+                <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/2.png" alt="">
+                <div class="text">
+                  <a class="btn" href="#">
+                    Digital Stethoscope
+                  </a>
+                  <span>1 x $85.00</span>
+                </div>
+                <button class="btn shadow">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+              <div class="product">
+                <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/3.png" alt="">
+                <div class="text">
+                  <a class="btn" href="#">
+                    Cosmetic Containers
+                  </a>
+                  <span>1 x $92.00</span>
+                </div>
+                <button class="btn shadow">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+              <div class="product">
+                <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/4.png" alt="">
+                <div class="text">
+                  <a class="btn" href="#">
+                    Thermometer Gun
+                  </a>
+                  <span>1 x $68.00</span>
+                </div>
+                <button class="btn shadow">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+            <div class="subtotal d-flex justify-content-between align-items-center">
+              <h6 class="text">
+                Subtotal:
+              </h6>
+              <h6 class="value">
+                $310.00
+              </h6>
+            </div>
+          </div>
+          <div class="canvas-footer">
+            <div class="buttons">
+              <a href="caret.html" class="btn view-cart" id='viewCart'>View Cart</a>
+              <a href="caret.html" class="btn checkout" id='checkOut'>Check Out</a>
+            </div>
+            <h6>Free Shipping on All Orders Over $100! Logo</h6>
+          </div>
+        </div>
+      </div>
+      <div class="links-header" id="links-header">
+        <a href="index.html" class="btn logo">
+          <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/logo-3.png" alt="">
+        </a>
+        <ul class="links">
+          <li class="link-item">
+            <a href="index.html" class="btn link">Home</a>
+          </li>
+          <li class="link-item" id="about">
+            <a href="#" class="btn link" type="button">About</a>
+            <div class="plus-icons">
+              <span class="plus-y"></span>
+              <span class="plus-x"></span>
+            </div>
+            <ul class="sub-links shadow">
+              <li class="sub-link">
+                <a class="btn" href="about.html">About</a>
+              </li>
+              <li class="sub-link">
+                <a class="btn" href="services.html">Services</a>
+              </li>
+              <li class="sub-link">
+                <a class="btn" href="servicesDetails.html">Services Details</a>
+              </li>
+              <li class="sub-link">
+                <a class="btn" href="team.html">Team</a>
+              </li>
+              <li class="sub-link">
+                <a class="btn" href="teamMember.html">Team Details</a>
+              </li>
+              <li class="sub-link">
+                <a class="btn" href="locations.html">Google Map Locations</a>
+              </li>
+            </ul>
+          </li>
+          <li class="link-item">
+            <a href="shop.html" class="btn link">Shop</a>
+          </li>
+          <li class="link-item">
+            <a href="blogs.html" class="btn link">News</a>
+          </li>
+          <li class="link-item">
+            <a href="contact.html" class="btn link">Contact</a>
+          </li>
+        </ul>
+        <h6>Menu</h6>
+        <button type="button" class="nav-toggler">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <div class="canvas-overlay left" id="overlay-left"></div>
+      <div class="left-canvas" id="leftCanvas">
+        <div class="canvas-cont">
+          <div class="head">
+            <a href="index.html" class="logo">
+              <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/logo.png" alt="">
+            </a>
+            <button class="btn close-canvas" type="button" id="close-canvas">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="body">
+            <form action="">
+              <input type="text" placeholder="Search" id="search-Input">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+            <ul class="the-links">
+              <li class="link">
+                <a class="btn" href="index.html">HOME</a>
+              </li>
+              <li class="link about" id="about-sub">
+                <a class="btn" href="#">ABOUT</a>
+                <div class="plus-icons">
+                  <span class="plus-y"></span>
+                  <span class="plus-x"></span>
+                </div>
+                <ul class="sub-links">
+                  <li class="sub-link">
+                    <a class="btn" href="about.html">About</a>
+                  </li>
+                  <li class="sub-link">
+                    <a class="btn" href="services.html">Services</a>
+                  </li>
+                  <li class="sub-link">
+                    <a class="btn" href="servicesDetails.html">Services Details</a>
+                  </li>
+                  <li class="sub-link">
+                    <a class="btn" href="team.html">Team</a>
+                  </li>
+                  <li class="sub-link">
+                    <a class="btn" href="teamMember.html">Team Details</a>
+                  </li>
+                  <li class="sub-link">
+                    <a class="btn" href="locations.html">Google Map Locations</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="link">
+                <a class="btn" href="shop.html">SHOP</a>
+              </li>
+              <li class="link">
+                <a class="btn" href="blogs.html">NEWS</a>
+              </li>
+              <li class="link">
+                <a class="btn" href="contact.html">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+          <div class="canvas-footer mt-20">
+            <div class="footer-links pt-15 pb-15 d-flex flex-column align-items-start gap-3">
+              <a href="#" class="btn account d-flex align-items-center">
+                <i class="fa-regular fa-user"></i>
+                My Account
+              </a>
+              <a href="#" class="btn whishlist d-flex align-items-center">
+                <i class="fa-regular fa-heart" ></i>
+                <span>2</span>
+                Whishlist
+              </a>
+              <a href="#" class="btn caret d-flex align-items-center">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>3</span>
+                Shoping Caret
+              </a>
+            </div>
+            <div class="social-links mt-30">
+              <a href="https://www.facebook.com/" class="btn">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/" class="btn">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.twitter.com/" class="btn">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/" class="btn">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="landing position-relative">
+    <div class="container">
+      <div class="content">
+        <h2>News Feeds</h2>
+        <div class="crumb">
+          <a href="index.html" class="btn home">
+            <i class="fa-solid fa-house-chimney"></i>
+            Home
+          </a>
+          <div class="arrow">
+            <i class="fa-solid fa-angles-right"></i>
+          </div>
+          <a href="blogs.html" class="btn about active">
+            Blog
+          </a>
+        </div>
+      </div>
+    </div>    
+  </div>
+  <div class="news section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-12 order-md-2">
+          <div class="left">
+            <div class="writer card d-flex flex-column align-items-center justify-content-center">
+              <img class="card-img" src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/team/4.jpg" alt="">
+              <div class="card-body text-center">
+                <h6 class="card-title pt-10 fw-bold">Rosalina D. Willaimson</h6>
+                <span class="d-block fs-14 pt-10">Traveller/Photographer</span>
+                <div class="review-icons pt-10">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span> ( 1 Reviews) </span>
+                </div>
+                <p class="pt-10">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis distinctio, odio, eligendi suscipit reprehenderit atque.
+                </p>
+                <div class="social-links pt-20 ">
+                  <a href="https://www.facebook.com/" class="btn">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/" class="btn">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="https://www.twitter.com/" class="btn">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="https://www.instagram.com/" class="btn">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="search box">
+              <h5 class="title">Search Objects</h5>
+              <form action="">
+                <input type="text" placeholder="search your keyword...">
+                <button class="btn" type="button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+            </div>
+            <div class="message box">
+              <h5 class="title">Drop Messege For Book</h5>
+              <form class="pt-20" action="">
+                <input type="text" placeholder="Your Name*">
+                <input type="text" placeholder="Your e-Mail*">
+                <textarea placeholder="Your Message" cols="30" rows="5"></textarea>
+                <button class="btn" type="submit">Send Message</button>
+              </form>
+            </div>
+            <div class="top-products box">
+              <h5 class="title">Top Rated Product</h5>              
+              <div class="product-item mt-20 pb-20 row">
+                <div class="col-4">
+                  <div class="left">
+                    <a class="left mr-10" href="shop.html">
+                      <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/1.png" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="right">
+                    <div class="review-icons">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <a href="shop.html">Luxury House In Greenville</a>
+                    <div class="price">
+                      <span>$30,000.00</span>
+                      <del>$35,000.00</del>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-item mt-20 pb-20 row">
+                <div class="col-4">
+                  <div class="left">
+                    <a class="left mr-10" href="shop.html">
+                      <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/2.png" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="right">
+                    <div class="review-icons">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <a href="shop.html">Apartment with Subunits</a>
+                    <div class="price">
+                      <span>$30,000.00</span>
+                      <del>$35,000.00</del>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-item mt-20 row">
+                <div class="col-4">
+                  <div class="left">
+                    <a class="left mr-10" href="shop.html">
+                      <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/3.png" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="right">
+                    <div class="review-icons">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <a href="shop.html">Apartment with Subunits</a>
+                    <div class="price">
+                      <span>$30,000.00</span>
+                      <del>$35,000.00</del>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="top-categories box">
+              <h5 class="title">Top Categories</h5>
+              <div class="items mt-30">
+                <div class="item d-flex align-items-center justify-content-between">
+                  <span>Apartments</span>
+                  <span>(26)</span>
+                </div>
+                <div class="item d-flex align-items-center justify-content-between pt-15">
+                  <span>Picture Stodio</span>
+                  <span>(30)</span>
+                </div>
+                <div class="item d-flex align-items-center justify-content-between pt-15">
+                  <span>Office</span>
+                  <span>(71)</span>
+                </div>
+                <div class="item d-flex align-items-center justify-content-between pt-15">
+                  <span>Luxary Vilas</span>
+                  <span>(56)</span>
+                </div>
+                <div class="item d-flex align-items-center justify-content-between pt-15">
+                  <span>Duplex House</span>
+                  <span>(60)</span>
+                </div>
+              </div>
+            </div>
+            <div class="latest-blogs box">
+              <h5 class="title">Latest Blogs</h5>
+              <div class="items mt-30">
+                <div class="item d-flex align-items-center pb-20">
+                  <a href="blogDetails.html">
+                    <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/team/5.jpg" alt="">
+                  </a>
+                  <div class="content">
+                    <a href="blogDetails.html">
+                      Lorem ipsum dolor sit cing elit, sed do.</a>
+                    <span class="d-block pt-10"><i class="fa-regular fa-calendar-days"></i> June 22, 2022</span>
+                  </div>
+                </div>
+                <div class="item d-flex align-items-center pt-20 pb-20">
+                  <a href="blogDetails.html">
+                    <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/team/6.jpg" alt="">
+                  </a>
+                  <div class="content">
+                    <a href="blogDetails.html">
+                      Lorem ipsum dolor sit cing elit, sed do.</a>
+                    <span class="d-block pt-10"><i class="fa-regular fa-calendar-days"></i> June 22, 2022</span>
+                  </div>
+                </div>
+                <div class="item d-flex align-items-center pt-20 pb-20">
+                  <a href="blogDetails.html">
+                    <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/team/7.jpg" alt="">
+                  </a>
+                  <div class="content">
+                    <a href="blogDetails.html">
+                      Lorem ipsum dolor sit cing elit, sed do.</a>
+                    <span class="d-block pt-10"><i class="fa-regular fa-calendar-days"></i> June 22, 2022</span>
+                  </div>
+                </div>
+                <div class="item d-flex align-items-center pt-20">
+                  <a href="blogDetails.html">
+                    <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/team/8.jpg" alt="">
+                  </a>
+                  <div class="content">
+                    <a href="blogDetails.html">
+                      Lorem ipsum dolor sit cing elit, sed do.</a>
+                    <span class="d-block pt-10"><i class="fa-regular fa-calendar-days"></i> June 22, 2022</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="twitter-feeds box">
+              <h5 class="title">Twitter Feeds</h5>
+              <div class="tweets mt-30">
+                <div class="tweet d-flex pb-20">
+                  <a class="mr-15" href="https://twitter.com/home?lang=en">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <div class="content">
+                    <p>Carsafe - #Gutenberg ready @wordpress Theme for Car Service, Auto Parts, Car Dealer available on @website
+                      <a href="https://website.net">https://website.net</a>
+                    </p>
+                    <span class="d-block pt-10"><i class="fa-regular fa-calendar-days"></i> June 22, 2022</span>
+                  </div>
+                </div>
+                <div class="tweet d-flex pt-20 pb-20">
+                  <a class="mr-15" href="https://twitter.com/home?lang=en">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <div class="content">
+                    <p>Carsafe - #Gutenberg ready @wordpress Theme for Car Service, Auto Parts, Car Dealer available on @website
+                      <a href="https://website.net">https://website.net</a>
+                    </p>
+                    <span class="d-block pt-10"><i class="fa-regular fa-calendar-days"></i> June 22, 2022</span>
+                  </div>
+                </div>
+                <div class="tweet d-flex pt-20">
+                  <a class="mr-15" href="https://twitter.com/home?lang=en">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <div class="content">
+                    <p>Carsafe - #Gutenberg ready @wordpress Theme for Car Service, Auto Parts, Car Dealer available on @website
+                      <a href="https://website.net">https://website.net</a>
+                    </p>
+                    <span class="d-block pt-10"><i class="fa-regular fa-calendar-days"></i> June 22, 2022</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="follow box">
+              <h5 class="title">Follow Us</h5>
+              <div class="social-links pt-20 ">
+                <a href="https://www.facebook.com/" class="btn">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com/" class="btn">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.twitter.com/" class="btn">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/" class="btn">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+            <div class="tags box mt-30">
+              <h5 class="title">Popular Tags</h5>
+              <div class="items pt-10">
+                <a href="#" class="tag btn text-uppercase" type="button">popular</a>
+                <a href="#" class="tag btn text-uppercase" type="button">Design</a>
+                <a href="#" class="tag btn text-uppercase" type="button">UX</a>
+                <a href="#" class="tag btn text-uppercase" type="button">usability</a>
+                <a href="#" class="tag btn text-uppercase" type="button">develop</a>
+                <a href="#" class="tag btn text-uppercase" type="button">icon</a>
+                <a href="#" class="tag btn text-uppercase" type="button">car</a>
+                <a href="#" class="tag btn text-uppercase" type="button">service</a>
+                <a href="#" class="tag btn text-uppercase" type="button">repairs</a>
+                <a href="#" class="tag btn text-uppercase" type="button">auto parts</a>
+                <a href="#" class="tag btn text-uppercase" type="button">oil</a>
+                <a href="#" class="tag btn text-uppercase" type="button">dealer</a>
+                <a href="#" class="tag btn text-uppercase" type="button">oil change</a>
+                <a href="#" class="tag btn text-uppercase" type="button">body color</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-12 order-lg-2">
+          <div class="right">
+            <div class="news-item">
+              <a href="blogDetails.html" class="btn blog">
+                <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/blog/31.jpg" alt="">
+              </a>
+              <div class="item-body">
+                <span class="d-block text-uppercase fw-bold">business</span>
+                <a href="blogDetails.html" class="blog-title btn">Lorem ipsum dolor sit amet, consecte cing elit, sed do eiusmod tempor.</a>
+                <div class="details d-flex align-items-center">
+                  <div class="views">
+                    <i class="fa-regular fa-eye"></i>
+                    <span>232 Views</span>
+                  </div>
+                  <div class="comments">
+                    <i class="fa-regular fa-comments"></i>
+                    <span>35 Comments</span>
+                  </div>
+                  <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>June 22, 2020</span>
+                  </div>
+                </div>
+                <p class="pt-20 fs-15 line-h-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                </p>
+              </div>
+              <div class="item-footer d-flex align-items-center justify-content-between">
+                <div class="the-writer d-flex aling-items-center">
+                  <img class="mr-10" src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/blog/author.jpg" alt="">
+                  <span class="fw-bold mt-10">By: Ethan</span>
+                </div>
+                <a href="blogDetails.html" class="btn read-more fw-bold ">
+                  Read More
+                </a>
+              </div>
+            </div>
+            <div class="news-item mt-30 video">
+              <div class="btn blog">
+                <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/blog/32.jpg" alt="">
+                <button type="button" class="btn play" id="open-video">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+              </div>
+              <div class="the-video">
+                <div class="container">
+                  <div class="video-popup">
+                    <video src="imgs/video_2.mp4" autoplay controls muted id="video"></video>
+                    <button class="btn closeVideo" type="button">
+                      <i class="fa-regular fa-circle-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="item-body">
+                <span class="d-block text-uppercase fw-bold">Medication</span>
+                <a href="blogDetails.html" class="blog-title btn">Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.r.</a>
+                <div class="details d-flex align-items-center">
+                  <div class="views">
+                    <i class="fa-regular fa-eye"></i>
+                    <span>232 Views</span>
+                  </div>
+                  <div class="comments">
+                    <i class="fa-regular fa-comments"></i>
+                    <span>35 Comments</span>
+                  </div>
+                  <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>June 22, 2020</span>
+                  </div>
+                </div>
+                <p class="pt-20 fs-15 line-h-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                </p>
+              </div>
+              <div class="item-footer d-flex align-items-center justify-content-between">
+                <div class="the-writer d-flex aling-items-center">
+                  <img class="mr-10" src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/blog/author.jpg" alt="">
+                  <span class="fw-bold mt-10">By: Ethan</span>
+                </div>
+                <a href="blogDetails.html" class="btn read-more fw-bold ">
+                  Read More
+                </a>
+              </div>
+            </div>
+            <div class="news-item slider mt-30">
+              <div class="owl-carousel owl-theme news-slider">
+                <div class="slide-item">
+                  <a href="blogDetails.html" class="blog">
+                    <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/blog/33.jpg" alt="">
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="blogDetails.html" class="blog">
+                    <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/blog/34.jpg" alt="">
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="blogDetails.html" class="blog">
+                    <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/blog/31.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="item-body">
+                <span class="d-block text-uppercase fw-bold">business</span>
+                <a href="blogDetails.html" class="blog-title btn">Magna aliqua. Ut enim ad minim venia m, quis nostrud exercitation ullamco.</a>
+                <div class="details d-flex align-items-center">
+                  <div class="views">
+                    <i class="fa-regular fa-eye"></i>
+                    <span>232 Views</span>
+                  </div>
+                  <div class="comments">
+                    <i class="fa-regular fa-comments"></i>
+                    <span>35 Comments</span>
+                  </div>
+                  <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>June 22, 2020</span>
+                  </div>
+                </div>
+                <p class="pt-20 fs-15 line-h-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                </p>
+              </div>
+              <div class="item-footer d-flex align-items-center justify-content-between">
+                <div class="the-writer d-flex aling-items-center">
+                  <img class="mr-10" src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/blog/author.jpg" alt="">
+                  <span class="fw-bold mt-10">By: Ethan</span>
+                </div>
+                <a href="blogDetails.html" class="btn read-more fw-bold ">
+                  Read More
+                </a>
+              </div>
+            </div>
+            <div class="news-item mt-30 sound">
+              <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1361266684&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/naturalsounds-sc" title="Natural Sounds" target="_blank" style="color: #cccccc; text-decoration: none;">Natural Sounds</a> · <a href="https://soundcloud.com/naturalsounds-sc/i-want-to-relax-1" title="I Want to Relax" target="_blank" style="color: #cccccc; text-decoration: none;">I Want to Relax</a></div>
+              <div class="item-body">
+                <span class="d-block text-uppercase fw-bold">business</span>
+                <a href="blogDetails.html" class="blog-title btn">Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</a>
+                <div class="details d-flex align-items-center">
+                  <div class="views">
+                    <i class="fa-regular fa-eye"></i>
+                    <span>232 Views</span>
+                  </div>
+                  <div class="comments">
+                    <i class="fa-regular fa-comments"></i>
+                    <span>35 Comments</span>
+                  </div>
+                  <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>June 22, 2020</span>
+                  </div>
+                </div>
+                <p class="pt-20 fs-15 line-h-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                </p>
+              </div>
+              <div class="item-footer d-flex align-items-center justify-content-between">
+                <div class="the-writer d-flex aling-items-center">
+                  <img class="mr-10" src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/blog/author.jpg" alt="">
+                  <span class="fw-bold mt-10">By: Ethan</span>
+                </div>
+                <a href="blogDetails.html" class="btn read-more fw-bold ">
+                  Read More
+                </a>
+              </div>
+            </div>
+            <div class="news-item mt-30">
+              <div class="item-body">
+                <span class="d-block text-uppercase fw-bold">business</span>
+                <a href="blogDetails.html" class="blog-title btn">In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</a>
+                <div class="details d-flex align-items-center">
+                  <div class="views">
+                    <i class="fa-regular fa-eye"></i>
+                    <span>232 Views</span>
+                  </div>
+                  <div class="comments">
+                    <i class="fa-regular fa-comments"></i>
+                    <span>35 Comments</span>
+                  </div>
+                  <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>June 22, 2020</span>
+                  </div>
+                </div>
+                <p class="pt-20 fs-15 line-h-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                </p>
+              </div>
+              <div class="item-footer d-flex align-items-center justify-content-between">
+                <div class="the-writer d-flex aling-items-center">
+                  <img class="mr-10" src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/blog/author.jpg" alt="">
+                  <span class="fw-bold mt-10">By: Ethan</span>
+                </div>
+                <a href="blogDetails.html" class="btn read-more fw-bold ">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="toTop" href="#" id="toButton"><i class="fa-solid fa-angle-up"></i></a>
+  <div class="explore">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-8 col-12">
+          <div class="left">
+            <h1>Buy medical disposable face mask
+              to protect your loved ones</h1>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="right">
+            <a href="products.html" class="btn">Explore All Products 
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+  <div class="footer-dark section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-3 col-12">
+          <div class="one">
+            <a href="index.html" class="btn logo">
+              <img src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/logo-2.png" alt="">
+            </a>
+            <p class="pt-10 fs-17">Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.</p>
+            <div class="address d-flex align-items-center gap-3 pt-20">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>Bani Mazar, Menia, Egypt</p>
+            </div>
+            <div class="phone d-flex align-items-center gap-3 pt-15">
+              <i class="fa-solid fa-phone-volume"></i>
+              <a href="tel:+201112391020">+201112391020</a>
+            </div>
+            <div class="email d-flex align-items-center gap-3 pt-15">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:abdelrahman.othman20@gmail.com">abdelrahman.othman20@gmail.com</a>
+            </div>
+            <div class="social-links pt-20 ">
+              <a href="https://www.facebook.com/" class="btn">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="https://www.linkedin.com/" class="btn">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://www.twitter.com/" class="btn">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/" class="btn">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-2 col-12">
+          <div class="part two">
+            <h4 class="fw-bold mb-0 mt-10">Company</h4>
+            <div class="links pt-20 d-flex flex-column align-items-start">
+              <a href="about.html" class="btn">About</a>
+              <a href="blogs.html" class="btn pt-10">Blogs</a>
+              <a href="shop.html" class="btn pt-10">All Products</a>
+              <a href="locations.html" class="btn pt-10">Locations Map</a>
+              <a href="faq.html" class="btn pt-10">FAQ</a>
+              <a href="contact.html" class="btn pt-10">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-2 col-12">
+          <div class="part three">
+            <h4 class="fw-bold mb-0 mt-10">Services</h4>
+            <div class="links pt-20 d-flex flex-column align-items-start">
+              <a href="track.html" class="btn">Order Tracking</a>
+              <a href="whishlist.html" class="btn pt-10">Whish List</a>
+              <a href="login.html" class="btn pt-10">Login</a>
+              <a href="account.html" class="btn pt-10">My Account</a>
+              <a href="terms.html" class="btn pt-10">Terms & Conditions</a>
+              <a href="about.html" class="btn pt-10">Promotional Offers</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-2 col-12">
+          <div class="part four">
+            <h4 class="fw-bold mb-0 mt-10">Customer Care</h4>
+            <div class="links pt-20 d-flex flex-column align-items-start">
+              <a href="login.html" class="btn">Login</a>
+              <a href="account.html" class="btn pt-10">My Account</a>
+              <a href="whishlist.html" class="btn pt-10">Whish List</a>
+              <a href="track.html" class="btn pt-10">Order Tracking</a>
+              <a href="faq.html" class="btn pt-10">FAQ</a>
+              <a href="contact.html" class="btn pt-10">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3 col-12">
+          <div class="five">
+            <h4 class="fw-bold mb-0 mt-10">Newsletter</h4>
+            <p class="pt-20">Subscribe to our weekly Newsletter and receive updates via email.</p>
+            <form action="" class="pt-20">
+              <input type="text" placeholder="Email">
+              <button class="btn" type="submit">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+            <div class="pay pt-20">
+              <h5>We Accept</h5>
+              <img class="pt-10" src="https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/icons/payment-4.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="all-rights">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6 col-12">
+          <div class="left text-sm-center">
+            <p>Created by Abdelrahman Othman 2023</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col12">
+          <div class="right">
+            <div class="links d-flex align-items-center">
+              <a href="#" class="btn">Terms & Conditions</a>
+              <a href="#" class="btn">Claim</a>
+              <a href="#" class="btn">Privacy & Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/all.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/canvases.js"></script>
+  <script src="js/news.js"></script>
+</body>
+</html>

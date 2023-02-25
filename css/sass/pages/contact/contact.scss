@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+@import "../../helpers/variables";
+@import "../../helpers/classes";
+@import "../../helpers/mixins";
+@import "../../helpers/buttons";
+
+
+.contact-info{
+  .box{
+    border: 1px solid $main-border-color;
+    padding: 40px 30px;
+    h5{
+      font-size: 24px;
+    }
+  }
+}
+
+.contact-form{
+  .container{
+    padding: 50px;
+    border: 1px solid $main-border-color;
+    .title{
+      position: relative;
+      padding-left: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background-color: $green-color;
+      }
+    }
+    form{
+      .inputs{
+        input{
+          border: 1px solid $main-border-color;
+          border-radius: 0;
+          outline: none;
+          height: 60px;
+          box-shadow: none;
+          padding: 20px 40px;
+          &::placeholder{
+            font-size: 14px;
+            color: $p-color;
+          }
+          &:focus{
+            border-color: $green-color;
+            color: $p-color;
+          }
+        }
+        svg{
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          color: $green-color;
+        }
+      }
+      textarea{
+        width: 100%;
+        border: 1px solid $main-border-color;
+        border-radius: 0;
+        outline: none;
+        box-shadow: none;
+        padding: 20px 40px;
+        height: 170px;
+        &::placeholder{
+          font-size: 14px;
+          color: $p-color;
+        }
+        &:focus{
+          border-color: $green-color;
+          color: $p-color;
+        }
+      }
+      .form-check{
+        label{
+          color: $p-color;
+        }
+      }
+      button{
+        border-radius: 0;
+        @include button(60px, 250px, $green-color, white, $heading-color, white, right);
+      @include flex(row, center, center);
+      border: 0;
+      }
+    }
+  }
+}

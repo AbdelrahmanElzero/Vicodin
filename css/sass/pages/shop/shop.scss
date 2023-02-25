@@ -1,0 +1,864 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+@import "../../helpers/variables";
+@import "../../helpers/classes";
+@import "../../helpers/mixins";
+@import "../../helpers/buttons";
+
+.box-title{
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 45px;
+  &::before, &::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $green-color;
+  }
+  &::before{
+    width: 20px;
+    left: 0;
+  }
+  &::after{
+    width: 3px;
+    border-radius: 50%;
+    left: 25px;
+  }
+}
+
+.box-right{
+  padding: 25px;
+  border: 1px solid $main-border-color;
+}
+
+
+
+.our-products{
+  .product-info{
+    @media (max-width: 991px){
+      margin-top: 70px;
+    }
+    .review-icons{
+      svg, span{
+        color: $star-rate;
+        font-size: 13px;
+        cursor: pointer;
+        transition: .4s;
+        &:hover{
+          color: $green-color;
+        }
+      }
+    }
+    .price{
+      padding-bottom: 10px;
+      border-bottom: 1px solid $main-border-color;
+      h3{
+        color: $green-color;
+        margin-top: 4px;
+      }
+    }
+    .text{
+      gap: 15px;
+      color: $heading-color;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $main-border-color;
+      span{
+        font-size: 14px;
+        font-weight: bold;
+        color: $p-color;
+        cursor: pointer;
+        transition: .4s;
+        &:hover{
+          color: $green-color;
+        }
+      }
+    }
+    .buy-product{
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      
+      .caret-btn{
+        display: flex;
+        div, input{
+          border: 1px solid $main-border-color;
+          width: 45px;
+          height: 60px;
+          user-select: none;
+          outline: none;
+          text-align: center;
+          padding: 10px;
+          @include flex(row, center, center);
+          color: $p-color;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        div{
+          cursor: pointer;
+        }
+      }
+      .add-toCart{
+        @include button(60px, 170px, $green-color, white, $heading-color, white, right);
+        border: 0;
+        font-weight: bold;
+      }
+    }
+    .add-wishlist, .compare{
+      border: 0;
+      background-color: transparent;
+      color: $p-color;
+      font-weight: bold;
+      font-size: 14px;
+      transition: .3;
+      svg{
+        margin-right: 3px;
+      }
+      &:hover{
+        color: $green-color;
+      }
+    }
+    .share{
+      span{
+        font-weight: bold;
+        color: $p-color;
+        padding-right: 10px;
+      }
+      .links{
+        a{
+          padding-bottom: 0;
+          color: $p-color;
+          transition: .6s;
+          &:hover{
+            color: $green-color;
+          }
+        }
+      }
+    }
+    .payment{
+      margin-top: 45px;
+    }
+  }
+}
+
+.top-products{
+  .product-item{
+    margin-left: 0;
+    .col-4{
+      padding-left: 0;
+    }
+    &:not(:last-of-type){
+      border-bottom: 1px solid $main-border-color;
+    }
+    .left{
+      padding-left: 0;
+      img{
+        width: 100%;
+      }
+    }
+    .right{
+      .review-icons{
+        svg{
+          font-size: 12px;
+          color: $star-rate;
+        }
+      }
+      a{
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+        color: $heading-color;
+        transition: .4s;
+        &:hover{
+          color: $green-color;
+        }
+      }
+      .price{
+        padding-top: 5px;
+        span{
+          color: $green-color;
+          font-size: 12px;
+          font-weight: bold;
+        }
+        del{
+          color: $red-color;
+          font-size: 11px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.slider-nav{
+  .img-item-two{
+    cursor: pointer;
+    &.slick-current{
+      img{
+        border: 1px solid $green-color;
+      }
+    }
+  }
+  button{
+    background-color: white;
+    border: 1px solid $main-border-color;
+    padding: 20px;
+    @include flex(row, center, center);
+    position: absolute;
+    top: 150%;
+    z-index: 99;
+    left: 0;
+    transition: .3s;
+    &::before{
+      color: $heading-color;
+      transition: .3s;
+    }
+    &:hover{
+      background-color: $green-color;
+      &::before{
+        color: white;
+      }
+    }
+    &.slick-prev{
+      top: 150%;
+      left: 0;
+    }
+    &.slick-next{
+      top: 150%;
+      left: 50px;
+    }
+  }
+}
+
+
+.buyOverlay, .loveOverlay{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .5;
+  position: fixed;
+  top: -200%;
+  left: 0;
+  z-index: 1998;
+  transition: .3s;
+  &.active{
+    top: 0;
+  }
+}
+
+.buyCanvas{
+  position: fixed;
+  top: -200%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 1999;
+  width: 500px;
+  transition: .4s;
+  @media (max-width: 991px){
+    width: 300px;
+  }
+  &.active{
+    top: 50%;
+  }
+  button.closeBuyCanvas{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 0;
+    padding: 7px 12px;
+    z-index: 1999;
+  }
+  .canvas-box{
+    .image{
+      img{
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+    .main-title{
+      padding-left: 0;
+      font-size: 18px;
+      transition: .4s;
+      &:hover{
+        color: $green-color;
+      }
+    }
+    .text{
+      padding-top: 10px;
+      color: $p-color;
+      svg{
+        color: $green-color;
+      }
+    }
+    .links{
+      padding-top: 15px;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      a{
+        &:first-of-type{
+          @include button(35px, 110px, $green-color, white, $heading-color, white, right);
+        }
+        &:last-of-type{
+          @include button(35px, 110px, $heading-color, white, $heading-color, white, left);
+        }
+      }
+    }
+  }
+}
+
+.loveCanvas{
+  position: fixed;
+  top: -200%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 1999;
+  width: 500px;
+  transition: .4s;
+  @media (max-width: 991px){
+    width: 300px;
+  }
+  &.active{
+    top: 50%;
+  }
+  button.closeBuyCanvas{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 0;
+    padding: 7px 12px;
+    z-index: 1999;
+  }
+  .image{
+    img{
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+  .main-title{
+    padding-left: 0;
+    font-size: 18px;
+    transition: .4s;
+    &:hover{
+      color: $green-color;
+    }
+  }
+  .text{
+    padding-top: 10px;
+    color: $p-color;
+    svg{
+      color: $green-color;
+    }
+  }
+  a.wishlist-view{
+    margin-top: 20px;
+    @include button(35px, 150px, $green-color, white, $heading-color, white, right);
+  }
+}
+
+.detailsCanvas{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: -300%;
+  left: 0;
+  z-index: 2997;
+  overflow-y: auto;
+  transition: .5s;
+  &.active{
+    top: 0;
+  }
+  @include scrollbar(8px, $green-color);
+}
+
+.detailsOverlay{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .4;
+  z-index: 2996;
+  position: fixed;
+  left: 0;
+  top: -200%;
+  transition: .7s;
+  &.active{
+    top: 0;
+  }
+}
+
+.productView-canvas{
+  width: 85%;
+  background-color: #fff;
+  z-index: 19999;
+  position: relative;
+  margin: 160px auto;
+  .container{
+    padding: 30px;
+    button.close{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: $main-border-color;
+      border-radius: 0;
+      padding: 10px 15px;
+      z-index: 1999;
+    }
+    .image{
+      img{
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .review-icons{
+      color: $star-rate;
+      svg{
+        font-size: 14px;
+      }
+      span{
+        font-size: 12px;
+      }
+    }
+    .product-name{
+      font-size: 30px;
+      padding-left: 0;
+      font-weight: 600;
+      transition: .6s;
+      &:hover{
+        color: $green-color;
+      }
+    }
+    .price{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      h1{
+        font-weight: 800;
+        color: $green-color;
+        margin-bottom: 0;
+      }
+      del{
+        color: red;
+        font-size: 25px;
+        font-weight: 800;
+      }
+    }
+    .buttons{
+      button{
+        font-size: 15px;
+        font-weight: 600;
+        color: $p-color;
+        padding-left: 0;
+        transition: .6s;
+        svg{
+          padding-right: 6px;
+        }
+        &:hover{
+          color: $green-color;
+        }
+      }
+    }
+    .share{
+      span{
+        font-weight: bold;
+        color: $p-color;
+        padding-right: 10px;
+      }
+      .links{
+        a{
+          padding-bottom: 0;
+          color: $p-color;
+          transition: .6s;
+          &:hover{
+            color: $green-color;
+          }
+        }
+      }
+    }
+    a.view-details{
+      float: right;
+      color: $p-color;
+      text-decoration: underline;
+      font-size: 15px;
+      display: block;
+      padding-top: 20px;
+      transition: .6s;
+      &:hover{
+        color: $green-color;
+      }
+    }
+  }
+}
+
+
+.reviews{
+  position: relative;
+  .buttons{
+    margin-top: 170px;
+    gap: 30px;
+    font-size: 18px;
+    color: $p-color;
+    font-weight: bold;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $main-border-color;
+    transition: .4s;
+    .butn{
+      cursor: pointer;
+      position: relative;
+      &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 2px;
+        background-color: $green-color;
+        bottom: -30px;
+        width:0;
+        transition: .4s;
+      }
+      &.active{
+        color: $green-color;
+        &::before{
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .description-text{
+    .title{
+      position: relative;
+      padding-left: 15px;
+      &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background-color: $green-color;
+      }
+    }
+    margin-top: 50px;
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+  
+  .customer-reviews{
+    margin-top: 50px;
+    display: none;
+    &.active{
+      display: block;
+    }
+    .title{
+      position: relative;
+      padding-left: 15px;
+      &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background-color: $green-color;
+      }
+    }
+    .review-icons{
+      svg, span{
+        color: $star-rate;
+        font-size: 13px;
+        cursor: pointer;
+        transition: .4s;
+        &:hover{
+          color: $green-color;
+        }
+      }
+    }
+    .comments{
+      .comment{
+        @media (max-width: 767px){
+          flex-direction: column;
+        }
+        img{
+          border-radius: 50%;
+          width: 110px;
+          margin-right: 20px;
+          @media (max-width: 767px){
+            margin-right: auto;
+          }
+        }
+        &.first{
+          padding-left: 0;
+          border-bottom: 1px solid $main-border-color;
+        }
+        .content{
+          margin-top: 20px;
+          padding-bottom: 30px;
+          .commenter{
+            a{
+              font-size: 18px;
+            }
+            span{
+              font-size: 13px;
+              color: $green-color;
+              font-weight: bold;
+              font-family: 'Josefin Sans', sans-serif;
+            }
+          }
+          .reply{
+            color: $p-color;
+            border-radius: 25px;
+            padding: 8px 24px;
+            border: 2px solid $main-border-color;
+            font-size: 15px;
+            font-weight: bold;
+            @include flex(row, center, center);
+            transition: .4s;
+            svg{
+              margin-right: 4px;
+            }
+            &:hover{
+              color: $green-color;
+              border-color: $green-color;
+            }
+          }
+          p{
+            margin-top: 10px;
+            @media (max-width: 767px){
+              font-size: 14px;
+            }
+          }
+        }
+        &.second{
+          border-bottom: 1px solid $main-border-color;
+        }
+      }
+    }
+  }
+  .post-comment{
+    background-color: $bg-section;
+    padding: 30px;
+    margin-top: 50px;
+    .title{
+      font-size: 23px;
+      &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background-color: $green-color;
+      }
+    }
+    form{
+      .inputs{
+        input{
+          border: 1px solid $main-border-color;
+          border-radius: 0;
+          outline: none;
+          height: 60px;
+          box-shadow: none;
+          padding: 20px 40px;
+          &::placeholder{
+            font-size: 14px;
+            color: $p-color;
+          }
+          &:focus{
+            border-color: $green-color;
+            color: $p-color;
+          }
+          @media (max-width: 767px){
+            padding: 20px;
+          }
+        }
+        svg{
+          position: absolute;
+          top: 20px;
+          right: 40px;
+          color: $green-color;
+        }
+      }
+      textarea{
+        width: 100%;
+        border: 1px solid $main-border-color;
+        border-radius: 0;
+        outline: none;
+        box-shadow: none;
+        padding: 20px 40px;
+        height: 170px;
+        &::placeholder{
+          font-size: 14px;
+          color: $p-color;
+        }
+        &:focus{
+          border-color: $green-color;
+          color: $p-color;
+        }
+        @media (max-width: 767px){
+          padding: 20px;
+        }
+      }
+      .form-check{
+        label{
+          color: $p-color;
+          @media (max-width: 767px){
+            font-size: 13px;
+          }
+        }
+      }
+      button{
+        border-radius: 0;
+        @include button(60px, 150px, $green-color, white, $heading-color, white, right);
+        @include flex(row, center, center);
+        border: 0;
+        @media (max-width: 767px){
+          width: 190px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.related-porducts-slider{
+  margin-top: 80px;
+  .title{
+    position: relative;
+    padding-left: 15px;
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background-color: $green-color;
+    }
+  }
+  .responsive{
+    .card{
+      position: relative;
+      border: 1px solid $main-border-color;
+      transition: .4s;
+      border-radius: 0;
+      width: 250px;
+      margin: 0 10px;
+      text-align: center;
+      &.new{
+        &::before{
+          content: "NEW";
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: 50px;
+          height: 30px;
+          font-weight: bold;
+          color: white;
+          @include flex(row, center, center);
+          background-color: $green-color;
+        }
+      }
+      .card-body{
+        margin-top: 10px;
+        .review-icons{
+          svg{
+            color: $star-rate;
+          }
+        }
+        a{
+          padding: 10px 0;
+          color: $heading-color;
+          transition: .6s;
+          font-weight: 800;
+          &:hover{
+            color: $green-color;
+          }
+        }
+        .price{
+          justify-content: center;
+          h1{
+            font-size: 16px;
+            margin-bottom: 0;
+            color: $green-color;
+            font-weight: bold;
+          }
+          del{
+            color: red;
+            font-weight: bold;
+          }
+        }
+      }
+      .buttons{
+        position: absolute;
+        bottom: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        @include flex(row, center, center);
+        transition: .6s;
+        button{
+          background-color: white;
+          padding: 10px 15px;
+          border-radius: 0;
+          &:not(:last-of-type){
+            border-right: 2px solid $main-border-color;
+          }
+          svg{
+            font-size: 18px;
+            color: $p-color;
+            transition: .6s;
+          }
+          &:hover{
+            svg{
+              color: $green-color;
+            }
+          }
+        }
+      }
+      &:hover{
+        box-shadow: $shadow;
+        .buttons{
+          opacity: 1;
+          bottom: 50%;
+        }
+      }
+    }
+    button{
+      padding: 30px;
+      border-radius: 50%;
+      z-index: 99;
+      background-color: white;
+      box-shadow: $shadow;
+      border: 1px solid $main-border-color;
+      @include flex(row, center, center);
+      transition: .4s;
+      opacity: 0;
+      &::before{
+        color: $heading-color;
+        font-size: 20px;
+        transition: .4s;
+      }
+      &:hover{
+        background-color: $green-color;
+        &::before{
+          color: white;
+        }
+      }
+    }
+    &:hover{
+      button{
+        opacity: 1;
+      }
+    }
+  }
+}

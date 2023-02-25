@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+@import "../../helpers/variables";
+@import "../../helpers/classes";
+@import "../../helpers/mixins";
+@import "../../helpers/buttons";
+
+
+.details{
+  .left-side{
+    .image{
+      img{
+        max-width: 100%;
+      }
+    }
+    h6{
+      color: $green-color;
+    }
+    .social-links{
+      a{
+        border: 1px solid $main-border-color;
+        border-radius: 0;
+        padding: 13px 18px;
+        transition: .4s;
+        svg{
+          color: $p-color;
+          transition: .4s;
+        }
+        &:hover{
+          background-color: $green-color;
+          svg{
+            color: white !important;
+          }
+          
+        }
+        &:not(:last-of-type){
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .right-side{
+    p{
+      line-height: 1.6;
+    }
+    .info{
+      .item{
+        h5{
+          color: $p-color;
+          font-size: 17px;
+          width: 40%;
+        }
+      }
+    }
+    .mem-info{
+      padding-top: 110px;
+    }
+    .steps{
+      padding-left: 20px;
+      li{
+        color: $p-color;
+        font-size: 17px;
+      }
+    }
+    .feats{
+      .box{
+        border: 1px solid #fafafa;
+        padding: 20px;
+        transition: .4s;
+        position: relative;
+        overflow: hidden;
+        &::after{
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 4px;
+          background-color: $green-color;
+          left: -100%;
+          bottom: 0;
+          transition: .4s;
+        }
+        & > svg{
+          font-size: 50px;
+          color: $green-color;
+        }
+        a.title{
+          color: $heading-color;
+          font-size: 20px;
+          font-family: 'Josefin Sans', sans-serif;
+          transition: .4s;
+          &:hover{
+            color: $green-color;
+          }
+        }
+        a.read{
+          color: $green-color;
+          svg{
+            margin-left: 3px;
+            margin-top: 4px;
+          }
+        }
+        &:hover, &.active{
+          box-shadow: $shadow;
+          &::after{
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-member{
+  margin-top: 50px;
+  background-color: white;
+  padding: 40px;
+  border: 1px solid $main-border-color;
+  h4{
+    padding-left: 15px;
+    margin-bottom: 0;
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background-color: $green-color;
+    }
+  }
+  form{
+    .input{
+      position: relative;
+      svg{
+        position: absolute;
+        color: $green-color;
+        font-size: 20px;
+        top: 20px;
+        right: 20px;
+      }
+      input{
+        outline: 0 !important;
+        border-radius: 0;
+        border: 1px solid $main-border-color;
+        height: 60px;
+        padding: 10px 30px;
+        width: 100%;
+        color: $p-color;
+        &::placeholder{
+          color: $p-color;
+          font-size: 12px;
+        }
+        &:focus{
+          border-color: $green-color;
+        }
+      }
+    }
+    .selection{
+      position: relative;
+      z-index: 99;
+      .select-btn{
+        padding: 10px 30px;
+        height: 60px;
+        border: 1px solid $main-border-color;
+        color: $p-color;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+        div{
+          margin-top: 6px;
+          &.icon{
+            transition: .4s;
+            svg{
+              color: $green-color;
+            }
+            &.active{
+              svg{
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+      .options{
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        transition: .4s;
+        opacity: 0;
+        padding: 10px 0;
+        pointer-events: none;
+        border: 1px solid $main-border-color;
+        &.active{
+          top: 60px;
+          opacity: 1;
+          pointer-events: all;
+        }
+        .option-item{
+          padding: 10px 10px 10px 30px;
+          cursor: pointer;
+          color: $p-color;
+          width: 100%;
+          font-size: 14px;
+          &.active{
+            font-weight: bold;
+            background-color: $main-border-color;
+          }
+          &:hover{
+            background-color: $main-border-color;
+          }
+        }
+      }
+    }
+    
+    .phone{
+      span{
+        position: absolute;
+        font-size: 17px;
+        font-weight: bold;
+        color: $green-color;
+        right: 20px;
+        display: block;
+        top: 6px;
+        z-index: 3;
+      }
+    }
+    .text-area{
+      svg{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 17px;
+        color: $green-color;
+      }
+      textarea{
+        width: 100%;
+        padding: 20px 40px;
+        height: 150px;
+        border: 1px solid $main-border-color;
+        outline: none;
+        color: $p-color;
+        &::placeholder{
+          color: $p-color;
+          font-size: 12px;
+        }
+        &:focus{
+          border-color: $green-color;
+        }
+      }
+    }
+    .form-check{
+      label{
+        color: $p-color;
+      }
+    }
+    button{
+      border-radius: 0;
+      @include button(60px, 250px, $green-color, white, $heading-color, white, right);
+    @include flex(row, center, center);
+    border: 0;
+    }
+  }
+}

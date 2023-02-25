@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-13 {
+  font-size: 13px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.fs-17 {
+  font-size: 17px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fs-25 {
+  font-size: 25px;
+}
+
+.fs-30 {
+  font-size: 30px;
+}
+
+.fs-40 {
+  font-size: 40px;
+}
+
+.fs-50 {
+  font-size: 50px;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.ml-15 {
+  margin-left: 15px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mr-15 {
+  margin-right: 15px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.pad-5 {
+  padding: 5px;
+}
+
+.pad-10 {
+  padding: 10px;
+}
+
+.pad-15 {
+  padding: 15px;
+}
+
+.pad-20 {
+  padding: 20px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.pl-15 {
+  padding-left: 15px;
+}
+
+.pl-20 {
+  padding-left: 20px;
+}
+
+.pl-30 {
+  padding-left: 30px;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pr-10 {
+  padding-right: 10px;
+}
+
+.pr-15 {
+  padding-right: 15px;
+}
+
+.pr-20 {
+  padding-right: 20px;
+}
+
+.pt-5 {
+  padding-top: 5px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pt-15 {
+  padding-top: 15px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pt-25 {
+  padding-top: 25px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.pt-40 {
+  padding-top: 40px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.pb-5 {
+  padding-bottom: 5px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.pb-15 {
+  padding-bottom: 15px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.line-h-9 {
+  line-height: 1.9;
+}
+
+.main-title {
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.details .container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.details .container .left-side .image img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.details .container .left-side p {
+  line-height: 1.6;
+}
+.details .container .left-side p span {
+  width: 80px;
+  height: 80px;
+  float: left;
+  text-align: center;
+  margin-right: 20px;
+  background-color: #0a9a73;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+}
+.details .container .left-side .image-left img {
+  max-width: 100%;
+}
+.details .container .right-side .other-services .item {
+  background-color: #f2f6f7;
+  padding: 10px 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.4s;
+  color: #5c727d;
+  font-size: 15px;
+  font-weight: bold;
+}
+.details .container .right-side .other-services .item svg {
+  padding: 15px 20px;
+  background-color: white;
+  color: #071c1f;
+  transition: 0.4s;
+}
+.details .container .right-side .other-services .item svg:hover {
+  background-color: #071c1f;
+  color: white;
+}
+.details .container .right-side .other-services .item:hover, .details .container .right-side .other-services .item.active {
+  background-color: #0a9a73;
+  color: white;
+}
+.details .container .right-side .other-services .item:hover svg, .details .container .right-side .other-services .item.active svg {
+  background-color: #cb3421;
+  color: white;
+}
+.details .container .right-side .other-services .item svg:hover {
+  background-color: #071c1f;
+  color: white;
+}
+.details .container .right-side .subscribe {
+  background-color: #071c1f;
+  padding: 50px;
+  position: relative;
+  z-index: 3;
+}
+.details .container .right-side .subscribe > svg {
+  color: white;
+  z-index: -1;
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  opacity: 0.1;
+}
+.details .container .right-side .subscribe p {
+  color: #0a9a73;
+  font-weight: bold;
+}
+.details .container .right-side .subscribe h3 {
+  color: white;
+  font-size: 33px;
+  font-weight: bold;
+}
+.details .container .right-side .subscribe form {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+.details .container .right-side .subscribe form input {
+  width: 80%;
+  height: 60px;
+  padding: 20px 25px;
+  outline: none;
+  background-color: #133236;
+  border: 1px solid #133236;
+  color: white;
+}
+.details .container .right-side .subscribe form input::-moz-placeholder {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+.details .container .right-side .subscribe form input::placeholder {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+.details .container .right-side .subscribe form button {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 0;
+  background-color: #0a9a73;
+  transition: 0.4s;
+}
+.details .container .right-side .subscribe form button svg {
+  color: white;
+  font-size: 20px;
+  transition: 0.4s;
+}
+.details .container .right-side .subscribe form button:hover {
+  background-color: #cb3421;
+}
+.details .container .right-side a {
+  padding: 0;
+  margin-top: 20px;
+  border-radius: 0;
+  overflow: hidden;
+}
+.details .container .right-side a img {
+  width: 100%;
+  transition: 0.4s;
+}
+.details .container .right-side a:hover img {
+  transform: scale(1.1);
+}/*# sourceMappingURL=serviceDetails.css.map */
